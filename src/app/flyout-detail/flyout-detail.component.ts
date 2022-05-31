@@ -8,7 +8,7 @@ import { AddinClientService } from '@blackbaud/skyux-lib-addin-client';
 import { AddinClientInitArgs } from '@blackbaud/sky-addin-client';
 
 @Component({
-  selector: 'flyout-detail',
+  selector: 'app-flyout-detail',
   templateUrl: './flyout-detail.component.html'
 })
 export class FlyoutDetailComponent implements OnInit {
