@@ -7,7 +7,7 @@ import { AddinClientService } from '@blackbaud/skyux-lib-addin-client';
 import { AddinClientInitArgs, AddinTileSummaryStyle, AddinClientShowFlyoutArgs } from '@blackbaud/sky-addin-client';
 
 @Component({
-  selector: 'my-tile',
+  selector: 'app-my-tile',
   templateUrl: './my-tile.component.html',
   styleUrls: ['./my-tile.component.scss']
 })
