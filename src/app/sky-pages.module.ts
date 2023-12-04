@@ -58,6 +58,7 @@ import {
 import {
   AppExtrasModule
 } from './app-extras.module';
+import { SkyThemeService } from '@skyux/theme';
 
 /**
  * @deprecated This module was migrated from SKY UX Builder v.4.
@@ -105,7 +106,8 @@ import {
           return undefined;
         }
       }
-    }
+    },
+    SkyThemeService
   ]
 })
 export class SkyPagesModule { }
