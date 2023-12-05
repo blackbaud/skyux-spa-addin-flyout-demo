@@ -13,7 +13,7 @@ import { AddinClientInitArgs } from '@blackbaud/sky-addin-client';
 })
 export class FlyoutDetailComponent implements OnInit {
   @Input()
-  public id: string;
+  public id!: string;
   public record: any;
 
   constructor(

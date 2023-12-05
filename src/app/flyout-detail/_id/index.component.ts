@@ -34,7 +34,7 @@ export class FlyoutDetailIdRouteIndexComponent implements OnInit, OnDestroy {
     this.route.params
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(params => {
-        this.id = params.id;
+        this.id = params['id'];
       });
   }
 
