@@ -28,6 +28,10 @@ import {
 } from '@skyux/assets';
 
 import {
+  SkyThemeService
+} from '@skyux/theme';
+
+import {
   FlyoutDetailComponent
 } from './flyout-detail/flyout-detail.component';
 
@@ -58,7 +62,6 @@ import {
 import {
   AppExtrasModule
 } from './app-extras.module';
-import { SkyThemeService } from '@skyux/theme';
 
 /**
  * @deprecated This module was migrated from SKY UX Builder v.4.
