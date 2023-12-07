@@ -13,7 +13,7 @@ import { AddinClientInitArgs, AddinTileSummaryStyle, AddinClientShowFlyoutArgs }
 })
 export class MyTileComponent implements OnInit {
   public records: any;
-  public rowHighlightedId: string;
+  public rowHighlightedId!: string;
 
   constructor(
     private flyoutSvc: FlyoutService,
@@ -56,10 +56,10 @@ export class MyTileComponent implements OnInit {
     this.rowHighlightedId = record.id;
 
     const flyoutArgs: AddinClientShowFlyoutArgs = {
-      url: 'https://host.nxt.blackbaud.com/addin-flyout-demo/flyout-detail',
+      url: 'https://localhost:4200/flyout-detail',
       permalink: {
         label: 'View record',
-        url: 'https://host.nxt.blackbaud.com/addin-flyout-demo/flyout-detail/' + record.id
+        url: 'https://localhost:4200/flyout-detail/' + record.id
       },
       showIterator: true,
       iteratorPreviousDisabled: MyTileComponent.isFirstElementInArray(this.rowHighlightedId, this.records),
@@ -74,7 +74,7 @@ export class MyTileComponent implements OnInit {
 
     this.addinClientService.showFlyout(flyoutArgs)
       .subscribe(() => {
-        this.rowHighlightedId = undefined;
+        this.rowHighlightedId = '';
       });
   }
 

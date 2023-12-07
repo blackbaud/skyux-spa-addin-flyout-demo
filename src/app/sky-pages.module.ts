@@ -28,6 +28,10 @@ import {
 } from '@skyux/assets';
 
 import {
+  SkyThemeService
+} from '@skyux/theme';
+
+import {
   FlyoutDetailComponent
 } from './flyout-detail/flyout-detail.component';
 
@@ -105,7 +109,8 @@ import {
           return undefined;
         }
       }
-    }
+    },
+    SkyThemeService
   ]
 })
 export class SkyPagesModule { }

@@ -13,7 +13,7 @@
   </sky-page-summary-subtitle>
   <sky-page-summary-status>
     <sky-label
-      labelType="{{ record.status === 'Past due' ? 'danger' : 'success' }}"
+      [labelType]="record.status === 'Past due' ? 'danger' : 'success'"
     >
       {{ record.status }}
     </sky-label>

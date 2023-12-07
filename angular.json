@@ -116,8 +116,7 @@
       }
     }
   },
-  "defaultProject": "addin-flyout-demo",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "analytics": false
   }
 }
