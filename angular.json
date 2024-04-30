@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "addin-flyout-demo:build:production"
+              "buildTarget": "addin-flyout-demo:build:production"
             },
             "development": {
-              "browserTarget": "addin-flyout-demo:build:development"
+              "buildTarget": "addin-flyout-demo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "addin-flyout-demo:build"
+            "buildTarget": "addin-flyout-demo:build"
           }
         },
         "test": {
