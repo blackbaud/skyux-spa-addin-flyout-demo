@@ -1,8 +1,8 @@
-// Place your settings in this file to overwrite default and user settings.
 {
-    // Columns at which to show vertical rulers
-    "editor.rulers": [140],
-
-    "typescript.tsdk": "node_modules/typescript/lib",
-    "git.ignoreLimitWarning": true
+  "editor.rulers": [
+    140
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "git.ignoreLimitWarning": true,
+  "eslint.useFlatConfig": false
 }
