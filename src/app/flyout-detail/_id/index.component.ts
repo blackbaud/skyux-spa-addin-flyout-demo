@@ -17,8 +17,9 @@ import {
 } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-flyout-detail-id-route-index',
-  templateUrl: './index.component.html'
+    selector: 'app-flyout-detail-id-route-index',
+    templateUrl: './index.component.html',
+    standalone: false
 })
 export class FlyoutDetailIdRouteIndexComponent implements OnInit, OnDestroy {
 
