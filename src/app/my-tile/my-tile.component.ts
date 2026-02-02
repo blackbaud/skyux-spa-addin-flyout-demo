@@ -1,25 +1,28 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  inject
 } from '@angular/core';
 import { FlyoutService } from '../shared/services/flyout.service';
 import { AddinClientService } from '@blackbaud/skyux-lib-addin-client';
 import { AddinClientInitArgs, AddinTileSummaryStyle, AddinClientShowFlyoutArgs } from '@blackbaud/sky-addin-client';
+import { SkyI18nModule } from '@skyux/i18n';
+import { SkyListModule } from '@skyux/list-builder';
+import { SkyListViewGridModule } from '@skyux/list-builder-view-grids';
 
 @Component({
     selector: 'app-my-tile',
     templateUrl: './my-tile.component.html',
     styleUrls: ['./my-tile.component.scss'],
-    standalone: false
+    imports: [SkyI18nModule, SkyListModule, SkyListViewGridModule],
+    standalone: true
 })
 export class MyTileComponent implements OnInit {
+  private flyoutSvc = inject(FlyoutService);
+  private addinClientService = inject(AddinClientService);
+
   public records: any;
   public rowHighlightedId!: string;
-
-  constructor(
-    private flyoutSvc: FlyoutService,
-    private addinClientService: AddinClientService
-  ) { }
 
   public ngOnInit() {
     this.addinClientService.args.subscribe((args: AddinClientInitArgs) => {

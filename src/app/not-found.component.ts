@@ -1,10 +1,12 @@
 import {
   Component
 } from '@angular/core';
+import { SkyI18nModule } from '@skyux/i18n';
 
 @Component({
     selector: 'app-not-found',
     templateUrl: './not-found.component.html',
-    standalone: false
+    imports: [SkyI18nModule],
+    standalone: true
 })
 export class NotFoundComponent { }

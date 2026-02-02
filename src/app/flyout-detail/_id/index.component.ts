@@ -1,7 +1,8 @@
 import {
   Component,
   OnDestroy,
-  OnInit
+  OnInit,
+  inject
 } from '@angular/core';
 
 import {
@@ -16,20 +17,20 @@ import {
   takeUntil
 } from 'rxjs/operators';
 
+import { FlyoutDetailComponent } from '../flyout-detail.component';
+
 @Component({
     selector: 'app-flyout-detail-id-route-index',
     templateUrl: './index.component.html',
-    standalone: false
+    imports: [FlyoutDetailComponent],
+    standalone: true
 })
 export class FlyoutDetailIdRouteIndexComponent implements OnInit, OnDestroy {
+  private route = inject(ActivatedRoute);
 
   public id = '';
 
   private ngUnsubscribe = new Subject<void>();
-
-  constructor(
-    private route: ActivatedRoute
-  ) { }
 
   public ngOnInit(): void {
     this.route.params

@@ -1,26 +1,29 @@
 import {
   Component,
   OnInit,
-  Input
+  Input,
+  inject
 } from '@angular/core';
 import { FlyoutService } from '../shared/services/flyout.service';
 import { AddinClientService } from '@blackbaud/skyux-lib-addin-client';
 import { AddinClientInitArgs } from '@blackbaud/sky-addin-client';
+import { SkyAvatarModule } from '@skyux/avatar';
+import { SkyLabelModule } from '@skyux/indicators';
+import { SkyPageSummaryModule } from '@skyux/layout';
 
 @Component({
     selector: 'app-flyout-detail',
     templateUrl: './flyout-detail.component.html',
-    standalone: false
+    imports: [SkyAvatarModule, SkyLabelModule, SkyPageSummaryModule],
+    standalone: true
 })
 export class FlyoutDetailComponent implements OnInit {
+  private flyoutSvc = inject(FlyoutService);
+  private addinClientService = inject(AddinClientService);
+
   @Input()
   public id!: string;
   public record: any;
-
-  constructor(
-    private flyoutSvc: FlyoutService,
-    private addinClientService: AddinClientService
-  ) { }
 
   public ngOnInit() {
     this.addinClientService.args.subscribe((args: AddinClientInitArgs) => {
