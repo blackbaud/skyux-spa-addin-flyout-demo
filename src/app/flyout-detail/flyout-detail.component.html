@@ -1,4 +1,5 @@
-<sky-page-summary *ngIf="record">
+@if (record) {
+<sky-page-summary>
   <sky-page-summary-image>
     <sky-avatar
       [name]="record.name"
@@ -27,3 +28,4 @@
     </p>
   </sky-page-summary-content>
 </sky-page-summary>
+}
