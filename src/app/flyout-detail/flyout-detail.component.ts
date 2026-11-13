@@ -2,7 +2,8 @@ import {
   Component,
   OnInit,
   Input,
-  inject
+  inject,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { FlyoutService } from '../shared/services/flyout.service';
 import { AddinClientService } from '@blackbaud/skyux-lib-addin-client';
@@ -15,6 +16,7 @@ import { SkyPageSummaryModule } from '@skyux/layout';
     selector: 'app-flyout-detail',
     templateUrl: './flyout-detail.component.html',
     imports: [SkyAvatarModule, SkyLabelModule, SkyPageSummaryModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: true
 })
 export class FlyoutDetailComponent implements OnInit {

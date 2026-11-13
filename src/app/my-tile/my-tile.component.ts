@@ -1,7 +1,8 @@
 import {
   Component,
   OnInit,
-  inject
+  inject,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { FlyoutService } from '../shared/services/flyout.service';
 import { AddinClientService } from '@blackbaud/skyux-lib-addin-client';
@@ -15,6 +16,7 @@ import { SkyListViewGridModule } from '@skyux/list-builder-view-grids';
     templateUrl: './my-tile.component.html',
     styleUrls: ['./my-tile.component.scss'],
     imports: [SkyI18nModule, SkyListModule, SkyListViewGridModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: true
 })
 export class MyTileComponent implements OnInit {
