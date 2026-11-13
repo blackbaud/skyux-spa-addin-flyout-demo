@@ -1,5 +1,6 @@
 import {
-  Component
+  Component,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { FlyoutDetailComponent } from './flyout-detail.component';
 
@@ -7,6 +8,7 @@ import { FlyoutDetailComponent } from './flyout-detail.component';
     selector: 'app-flyout-detail-route-index',
     templateUrl: './index.component.html',
     imports: [FlyoutDetailComponent],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: true
 })
 export class FlyoutDetailRouteIndexComponent { }

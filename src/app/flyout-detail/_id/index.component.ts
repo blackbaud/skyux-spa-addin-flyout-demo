@@ -2,7 +2,8 @@ import {
   Component,
   OnDestroy,
   OnInit,
-  inject
+  inject,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 import {
@@ -23,6 +24,7 @@ import { FlyoutDetailComponent } from '../flyout-detail.component';
     selector: 'app-flyout-detail-id-route-index',
     templateUrl: './index.component.html',
     imports: [FlyoutDetailComponent],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: true
 })
 export class FlyoutDetailIdRouteIndexComponent implements OnInit, OnDestroy {
